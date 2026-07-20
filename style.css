@@ -1,0 +1,496 @@
+/* 1. CUSTOM FONTS LOADING DIRECTORY
+ */
+@font-face {
+    font-family: domain;
+    src: url('./domain.ttf');
+}
+
+@font-face {
+    font-family: canopee;
+    src: url('./canopee.ttf'); 
+}
+
+/*2. GLOBAL INITIALIZATION STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    background-color: #C4BCB3;
+}
+
+#main {
+    background-color: #222;
+    overflow-x: hidden;
+}
+
+/* 3. PAGE 1 - HERO HERO GRID & TEXT */
+#page1 {
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #C4BCB3;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 4vh;
+}
+
+#nav {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    padding: 0 4vw;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+
+#nav img {
+    height: 3.5vh;
+    width: auto;
+    max-width: 30%;
+}
+
+#nav h5 {
+    font-size: 1.1vw;
+    font-weight: 100;
+    width: 30%;
+    font-family: domain, Georgia, serif;
+}
+
+#nav i {
+    font-size: 1.3vw;
+    width: 30%;
+    text-align: right;
+}
+
+/* Three Column Hero Grid Setup */
+#elems { 
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: stretch; /* Forces left, right, and center columns to be the exact same vertical height */
+    justify-content: space-between;
+    padding: 6vh 4vw;
+}
+
+#elem1, #elem3 {
+    width: 28%;
+    height: auto;
+}
+
+/* Center Editorial Column Layout Rules */
+#elem2 {
+    width: 38%;
+    border-right: 1px solid rgba(0, 0, 0, 0.25); /* Sleek vertical divider lines */
+    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 8vh 3vw; /* Pushes text content away from lines to stretch them long vertically */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Clusters content beautifully in the absolute middle */
+}
+
+/* Image Containment Systems */
+#elem1 #image-div, #elem3 #image-div {
+    height: 26vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5vh;
+}
+
+#image-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform ease 0.5s;
+}
+
+#image-div:hover img {
+    transform: scale(1.1);
+}
+
+/* Left & Right Column Typography */
+#elem1 h4, #elem3 h4 {
+    font-size: 2.2vw;            /* Increased from 1.2vw to match the bold editorial layout */
+    margin-top: 2vh;             /* Space between the image container and text */
+    margin-bottom: 1.5vh;
+    font-family: canopee, Impact, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+#elem1 h4 span, #elem3 h4 span {
+    background-color: #B43B12;
+    color: #C4BCB3;
+    font-weight: 400;
+    font-family: canopee, Impact, sans-serif; /* Keep the font styling consistent for the badge */
+    font-size: 1.1vw;            /* Scaled up from 0.75vw to match the larger header size */
+    padding: 4px 8px;            /* Increased padding around the badge text */
+    margin-left: 0.8vw;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+#elem1 p, #elem3 p {
+    font-size: 1.4vw;            /* Increased from 0.95vw for prominent readability */
+    line-height: 1.35;           /* Slightly tighter line-height to make paragraphs punchy */
+    font-family: domain, Georgia, serif;
+    font-weight: 300;
+    color: #1a1a1a;              /* Deeper charcoal color to fit the premium aesthetic */
+}
+/* Center Column Specific Typography Fixes */
+#elem2 h2 {
+    font-family: canopee, Impact, sans-serif;
+    font-size: 5.5vw; /* Slightly larger to match her scale */
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 0.95;
+    color: #000000;
+    margin-bottom: 4vh;
+}
+
+#elem2 h3 {
+    font-family: domain, Georgia, serif;
+    font-size: 2.6vw; /* Increased from 1.6vw to fill out the width properly */
+    color: #1a1a1a;
+    font-weight: 300; /* Lighter weight to eliminate that thick, blocky look */
+    line-height: 1.15; /* Tighter line-height to bunch the phrase together nicely */
+    margin-bottom: 6vh;
+    text-align: center;
+}
+
+#elem2 h6 {
+    font-family: domain, Georgia, serif;
+    font-size: 1vw;
+    color: #222222;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#elem2 h6 span {
+    font-family: canopee, Impact, sans-serif;
+    color: #000000;
+    font-weight: 900;
+    font-size: 1.3vw;
+    margin-right: 0.4vw;
+    letter-spacing: 0.02vw;
+    text-transform: uppercase;
+}
+/* Giant Bottom Text Title Frame */
+/* Giant Bottom Text Title Frame */
+#page1 h1 {
+    width: 100%;
+    background-color: rgb(29, 29, 27);
+    margin-top: 2vh;
+    margin-left: 0;
+    
+    /* THE FIX: Remove all outer padding entirely */
+    padding: 0; 
+    box-sizing: border-box;
+
+    /* Distribution System */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Flushes letters perfectly to the bottom edge */
+    overflow: hidden;
+}
+
+/* Style the individual letters inside the wrapper */
+#page1 h1 span {
+    font-family: Canopee, sans-serif;
+    font-size: 34vw;       /* Increased size to force the letters to fill the vertical space completely */
+    font-weight: 400;
+    line-height: 0.75;     /* Pulls the layout down to clip empty font space at the top */
+    color: rgb(205, 198, 190);
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   4. PAGE 2 - DESCRIPTION GRID
+   ========================================== */
+#page2 {
+    height: auto;
+    min-height: 120vh;
+    width: 100%;
+    background-color: #C4BCB3;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 10vh 4vw;
+}
+
+#page2-left {
+    height: auto;
+    padding-right: 5vw;
+    width: 35%;
+    border-right: 1px solid #4b4b4b;
+}
+
+#page2-left h2 {
+    font-size: 7vw;
+    font-family: canopee, Impact, sans-serif;
+    line-height: 0.95;
+    font-weight: 100;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+}
+
+#page2-left h2 span {
+    font-size: 9vw;
+    font-weight: 900;
+    display: block;
+}
+
+#page2-left img {
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 3vh;
+}
+
+#page2-left p {
+    font-size: 1.4vw;
+    line-height: 1.4;
+    font-family: domain, Georgia, serif;
+    color: #2f2f2f;
+}
+
+#page2-right {
+    height: auto;
+    width: 62%;
+    padding-left: 5vw;
+}
+
+#page2-right img {
+    height: 50vh;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+#page2-right h1 {
+    font-family: canopee, Impact, sans-serif;
+    font-size: 6vw;
+    font-weight: 100;
+    letter-spacing: -1px;
+    line-height: 1.05;
+    word-wrap: break-word;
+}
+
+/* ==========================================
+   5. PAGE 3 - HERO BANNER (BALANCED ALIGNMENT)
+   ========================================== */
+#page3 {
+    padding: 6vh 4vw;          
+    background-color: #C4BCB3;
+    width: 100%;
+    display: flex;
+    align-items: center;       
+    justify-content: space-between; 
+    box-sizing: border-box;
+    position: relative;        
+}
+
+#page3 h1 {
+    font-size: 24.5vw;            
+    font-family: canopee, Impact, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: -1.2vw;     
+    
+    background-color: #1C1C19;
+    color: #C4BCB3;
+    line-height: 0.8;       
+    margin: 0;
+    
+    /* THE REAL CENTERING SYSTEM */
+    width: 73%;                 /* Leaves ~22-25% room for the image on the right */
+    display: flex;
+    justify-content: center;    /* Standardizes center alignment */
+    align-items: center;
+    
+    /* The Offset Fix: Balanced padding that neutralizes the negative letter-spacing pull */
+    padding: 4vh 2vw 4vh 3.2vw; /* Added exactly 1.2vw more padding to the left side */
+    box-sizing: border-box;
+}
+
+#page3 img {
+    /* 4. KEY FIX: Scales the stamp cleanly and leaves a beautiful empty space before it */
+    width: 22%;                
+    height: auto;              
+    position: relative;        
+    margin-left: 0;            /* Reset old negative spacing overlap completely */
+    z-index: 2;                
+}
+
+
+/* ==========================================
+   6. PAGE 4 - TIMELINE INTERACTION
+   ========================================== */
+#page4 {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #C4BCB3;
+    padding: 5vh 4vw;
+}
+
+#page4-left {
+    width: 60%;
+    height: 75vh;
+}
+
+#page4-left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page4-right {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75vh;
+}
+
+#page4-right p {
+    font-size: 1.5vw;
+    font-family: domain, Georgia, serif;
+    font-weight: 100;
+    color: #2f2f2f;
+    line-height: 1.4;
+}
+
+#page4-right #anda {
+    height: 14vw;
+    width: 14vw;
+    background-color: #CAC1B6;
+    border: 1px solid #2f2f2fc6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+    cursor: pointer;
+}
+
+#anda h1 {
+    font-size: 4vw;
+    font-weight: 100;
+    font-family: canopee, Impact, sans-serif;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform ease 0.6s;
+    text-transform: uppercase;
+}
+
+#anda img {
+    height: 3vw;
+    position: absolute;
+    transition: transform ease 0.6s;
+    transform: scale(0);
+}
+
+#anda:hover h1 {
+    transform: scale(0);
+}
+
+#anda:hover img {
+    transform: scale(1);
+}
+/* ==========================================
+   7. PAGE 5 & 6 - INFINITE TEXT TICKER ROW
+   ========================================== */
+#page5 {
+    padding: 6vh 0;              
+    width: 100vw;                /* Force exactly viewport width */
+    max-width: 100%;             /* Prevents breaking Locomotive layout */
+    background-color: #C4BCB3;
+    border-top: 1px solid #2f2f2f;
+    border-bottom: 1px solid #2f2f2f;
+    overflow: hidden;            /* Crucial: hides everything off-screen */
+    
+    /* Strict layout system */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#page5 h1 {
+    font-size: 5vw;
+    font-family: domain, Georgia, serif;
+    font-weight: 100;
+    line-height: 1.1;            
+    animation: scroll 12s linear infinite;
+    
+    /* THE FIX: Force elements not to compress or distort outside the view bounds */
+    display: inline-block;
+    flex-shrink: 0;              
+    padding-right: 4vw;          
+    white-space: nowrap;         /* Moves the text row strictly side by side */
+}
+
+#page5 h1 span {
+    font-family: canopee, Impact, sans-serif;
+    background-color: #1b1b1b;
+    color: #C4BCB3;
+    padding: 0.5vh 1vw;          
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;      
+}
+
+#page6 {
+    height: 15vh;
+    width: 100%;
+    background-color: #C4BCB3;
+}
+
+/* Core Infinite Ticker Frame Logic Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Flawlessly loops layout without gaps */
+    }
+}
+
+#page5:hover h1 {
+    animation-play-state: paused;
+}
+
+#page6 {
+    height: 15vh;
+    width: 100%;
+    background-color: #C4BCB3;
+}
+
+/* Core Infinite Ticker Frame Logic Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
