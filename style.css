@@ -2,12 +2,12 @@
  */
 @font-face {
     font-family: domain;
-    src: url('./domain.ttf');
+    src: url('asssets/domain.ttf');
 }
 
 @font-face {
     font-family: canopee;
-    src: url('./canopee.ttf'); 
+    src: url('asssets/canopee.ttf'); 
 }
 
 /*2. GLOBAL INITIALIZATION STYLES */
